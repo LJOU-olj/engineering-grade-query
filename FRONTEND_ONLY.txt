@@ -1,0 +1,1 @@
+Public UI only. No class roster, grades, publication token or NAS credentials. Backend URL must be configured before release.
