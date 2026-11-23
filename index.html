@@ -17,13 +17,13 @@
   <header class="site-header"><div class="header-inner"><a class="brand" href="./" aria-label="回到成績查詢首頁"><span class="brand-mark" aria-hidden="true">工</span><span>工程規劃與控制<small>STUDENT GRADE PORTAL</small></span></a><span class="preliminary-tag">初步成績</span></div></header>
   <main id="main-content">
     <section id="query-section" aria-labelledby="query-title">
-      <div class="intro"><p class="eyebrow">YOUR LEARNING RECORD</p><h1 id="query-title">查看目前的<br><span>學習成績與出席紀錄</span></h1><p class="intro-text">輸入你的班級、完整學號與姓名，<br class="mobile-break">查詢目前已登錄的個人成績。</p></div>
-      <section class="query-card" aria-labelledby="form-title"><div class="card-heading"><span class="section-icon" aria-hidden="true">✓</span><div><h2 id="form-title">確認你的資料</h2><p>三項資料須與登錄內容完全一致。</p></div></div>
+      <div class="intro"><p class="eyebrow">YOUR LEARNING RECORD</p><h1 id="query-title">查看目前的<br><span>學習成績與出席紀錄</span></h1><p class="intro-text">輸入你的班級、學號與姓名，<br class="mobile-break">查詢目前已登錄的個人成績。</p></div>
+      <section class="query-card" aria-labelledby="form-title"><div class="card-heading"><span class="section-icon" aria-hidden="true">✓</span><div><h2 id="form-title">資料輸入</h2><p>三項資料須與登錄內容完全一致。</p></div></div>
         <form id="query-form" autocomplete="off">
-          <div class="form-grid"><div class="field"><label for="class-code">班級</label><select id="class-code" name="class_code" required><option value="">請選擇班級</option><option value="A">甲班</option><option value="B">乙班</option></select></div><div class="field"><label for="student-id">完整學號</label><input id="student-id" name="student_id" maxlength="40" placeholder="請輸入完整學號" required spellcheck="false" autocapitalize="characters" autocomplete="off"></div><div class="field"><label for="student-name">學生姓名</label><input id="student-name" name="student_name" maxlength="80" placeholder="請輸入完整姓名" required autocomplete="off"></div></div>
+          <div class="form-grid"><div class="field"><label for="class-code">班級</label><select id="class-code" name="class_code" required><option value="">請選擇班級</option><option value="A">甲班</option><option value="B">乙班</option></select></div><div class="field"><label for="student-id">學號</label><input id="student-id" name="student_id" maxlength="40" placeholder="請輸入學號" required spellcheck="false" autocapitalize="characters" autocomplete="off"></div><div class="field"><label for="student-name">學生姓名</label><input id="student-name" name="student_name" maxlength="80" placeholder="請輸入完整姓名" required autocomplete="off"></div></div>
           <div id="query-message" class="query-message" role="status" aria-live="polite"></div><button id="submit-query" class="primary-button" type="submit">查詢我的成績</button>
         </form>
-        <div class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><p>僅顯示符合這三項資料的個人紀錄。<br>使用共用電腦時，查詢後請按「清除並重新查詢」。</p></div>
+        <div class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><p>需再次查詢時請按「清除並重新查詢」</p></div>
       </section>
       <div class="query-footnotes"><p><strong>資料更新</strong><span id="snapshot-date">正在確認資料時間…</span></p><p id="sync-status" role="status">正在確認更新狀態…</p><p>此處為初步登錄結果，正式成績以教師公告為準。</p></div>
     </section>
