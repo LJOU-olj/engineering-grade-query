@@ -10,8 +10,8 @@
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/style.css">
   <script src="./assets/config.js" defer></script>
-  <script src="./assets/view.js?v=9b0e5d13e7b7" defer></script>
-  <script src="./assets/app.js?v=f81c9d56594c" defer></script>
+  <script src="./assets/view.js?v=7e81b4f43d08" defer></script>
+  <script src="./assets/app.js?v=3cec25ea2329" defer></script>
 </head>
 <body>
   <header class="site-header"><div class="header-inner"><a class="brand" href="./" aria-label="回到成績查詢首頁"><span class="brand-mark" aria-hidden="true">工</span><span>工程規劃與控制<small>STUDENT GRADE PORTAL</small></span></a><span class="preliminary-tag">初步成績</span></div></header>
@@ -20,7 +20,7 @@
       <div class="intro"><p class="eyebrow">YOUR LEARNING RECORD</p><h1 id="query-title"><span>學習成績與出席紀錄</span></h1><p class="intro-text">輸入你的班級、學號與姓名，<br class="mobile-break">查詢目前已登錄的個人成績。</p></div>
       <section class="query-card" aria-labelledby="form-title"><div class="card-heading"><span class="section-icon" aria-hidden="true">✓</span><div><h2 id="form-title">資料輸入</h2></div></div>
         <form id="query-form" autocomplete="off">
-          <div class="form-grid"><div class="field"><label for="class-code">班級</label><select id="class-code" name="class_code" required><option value="">請選擇班級</option><option value="A">營建三甲</option><option value="B">營建三乙</option></select></div><div class="field"><label for="student-id">學號</label><input id="student-id" name="student_id" maxlength="40" placeholder="請輸入學號" required spellcheck="false" autocapitalize="characters" autocomplete="off"></div><div class="field"><label for="student-name">學生姓名</label><input id="student-name" name="student_name" maxlength="80" placeholder="請輸入完整姓名" required autocomplete="off"></div></div>
+          <div class="form-grid"><div class="field"><label for="class-code">班級</label><select id="class-code" name="class_code" required disabled><option value="">正在確認開放班級…</option></select></div><div class="field"><label for="student-id">學號</label><input id="student-id" name="student_id" maxlength="40" placeholder="請輸入學號" required spellcheck="false" autocapitalize="characters" autocomplete="off"></div><div class="field"><label for="student-name">學生姓名</label><input id="student-name" name="student_name" maxlength="80" placeholder="請輸入完整姓名" required autocomplete="off"></div></div>
           <div id="query-message" class="query-message" role="status" aria-live="polite"></div><button id="submit-query" class="primary-button" type="submit">查詢我的成績</button>
         </form>
         <div class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><p>需再次查詢時請按「清除並重新查詢」</p></div>
