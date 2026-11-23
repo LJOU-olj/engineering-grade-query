@@ -30,6 +30,6 @@
   result.addEventListener('keydown',keepPrivate);
   window.addEventListener('pagehide',()=>{++generation;controller?.abort();form.reset();clearResult();query.hidden=false;});
   window.addEventListener('pageshow',event=>{if(event.persisted)reset();});
-  function refreshMeta(){return json('/api/meta').then(meta=>{const manual=meta.sync?.mode==='manual';const stamp=meta.published_at||meta.captured_at;document.getElementById('snapshot-date').textContent=stamp?window.GRADE_PORTAL_VIEW.date(stamp):manual?'老師尚未發布資料':'資料尚未匯入';document.getElementById('snapshot-date').previousElementSibling.textContent=manual?'上次發布':'資料更新';document.getElementById('sync-status').textContent=manual?'手動發布模式；顯示老師最近一次發布的資料。':meta.sync?.fresh?'資料自動更新中；重新查詢可取得最新紀錄。':'目前顯示上次成功更新的資料。';if(!meta.ready){button.disabled=true;status(manual?'老師尚未發布成績，請稍後再查詢。':'成績資料尚未準備完成，請稍後再查詢。');}else button.disabled=false;}).catch(()=>{document.getElementById('snapshot-date').textContent='暫時無法取得更新時間';});}
+  function refreshMeta(){return json('/api/meta').then(meta=>{const manual=meta.sync?.mode==='manual';const stamp=meta.published_at||meta.captured_at;document.getElementById('snapshot-date').textContent=stamp?window.GRADE_PORTAL_VIEW.date(stamp):manual?'老師尚未發布資料':'資料尚未匯入';document.getElementById('snapshot-date').previousElementSibling.textContent=manual?'上次發布':'資料更新';if(!meta.ready){button.disabled=true;status(manual?'老師尚未發布成績，請稍後再查詢。':'成績資料尚未準備完成，請稍後再查詢。');}else button.disabled=false;}).catch(()=>{document.getElementById('snapshot-date').textContent='暫時無法取得更新時間';});}
   refreshMeta();
 })();
